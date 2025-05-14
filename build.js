@@ -49,7 +49,13 @@ fs.mkdirSync(distDir, { recursive: true });
 copyFile('src/index.html', path.join(distDir, 'index.html'));
 copyFile('src/styles.css', path.join(distDir, 'styles.css'));
 copyFile('src/script.js', path.join(distDir, 'script.js'));
-copyFile('src/netlify.toml', path.join(distDir, 'netlify.toml'));
+  const netlifyTomlSource = 'src/netlify.toml';
+  const netlifyTomlDestination = path.join(distDir, 'netlify.toml');
+  if (fs.existsSync(netlifyTomlSource)) {
+    copyFile(netlifyTomlSource, netlifyTomlDestination);
+  } else {
+    console.error('netlify.toml not found in src directory.');
+  }
 
 // Copy assets directory
 copyDir('assets', path.join(distDir, 'assets'));
