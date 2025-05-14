@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Beth Cooper's landing page",
   "scripts": {
-    "build": "rmdir /s /q dist && mkdir dist && copy index.html dist\\index.html && copy styles.css dist\\styles.css && copy script.js dist\\script.js && copy netlify.toml dist\\netlify.toml && xcopy /E /Y assets dist\\assets",
+    "build": "node build.js",
     "start": "serve dist",
     "dev": "serve ."
   },
