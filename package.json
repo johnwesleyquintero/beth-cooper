@@ -9,7 +9,7 @@
   },
   "author": "John Wesley Quintero",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "serve": "^14.2.4"
   }
 }
