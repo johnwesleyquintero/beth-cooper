@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Beth Cooper's personal website showcasing her adventures in exploration, storytelling, photography, and nature appreciation." />
+    <title>Beth Cooper - Explorer & Storyteller</title>
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:title" content="Beth Cooper - Explorer & Storyteller" />
+    <meta property="og:description" content="Join Beth Cooper on her journey of discovery through photography, nature exploration, and storytelling." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bethcooper.netlify.app" />
+    <meta property="og:image" content="https://bethcooper.netlify.app/assets/mom's_profile_photo.jpg" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="container nav-container">
+        <a href="#" class="logo">Beth Cooper</a>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#themes" class="nav-link">Themes</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <script src="script.js"></script>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Powered by <a href="https://wescode.vercel.app/" target="_blank" rel="noopener noreferrer">Wesley Quintero</a></p>
+      </div>
+    </footer>
+
+    <!-- Gallery images with lazy loading -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+        
+        if ('IntersectionObserver' in window) {
+          let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                let lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.classList.remove('lazy');
+                lazyImageObserver.unobserve(lazyImage);
+              }
+            });
+          });
+
+          lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
+          });
+        }
+      });
+    </script>
+
+    <header class="hero-section">
+      <!-- Background image will be applied via CSS -->
+      <h1>Beth Cooper</h1>
+      <p>Explorer, Storyteller, and Adventure Seeker</p>
+      <a href="#about" class="cta-button">Discover My Story</a>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            Join me on a journey of discovery! I'm Beth Cooper, and I'm passionate about exploring the world, embracing new experiences, and sharing the beauty of adventure and lifestyle. From hiking through breathtaking landscapes to capturing the essence of everyday moments, I'm here to inspire you to live a life filled with wonder.
+          </p>
+          <img
+            class="image-holder"
+            src="assets/mom's_profile_photo.jpg"
+            alt="Beth Cooper Profile Photo"
+          />
+        </section>
+
+        <section id="gallery">
+          <h2>My Gallery</h2>
+          <p>A glimpse into my adventures.</p>
+          
+          <div class="gallery-sequence">
+            <div class="gallery-sequence-item">
+              <img src="assets/riding_bike.jpg" alt="Exploring Sitio Kapatagan by bike" />
+            </div>
+            <div class="gallery-sequence-item">
+              <img src="assets/landslide_country_side.jpg" alt="Countryside landslide" />
+            </div>
+            <div class="gallery-sequence-item">
+              <img src="assets/Escape-Nature-Camp.jpg" alt="Countryside camping" />
+            </div>
+          </div>
+          
+          <div class="gallery-sequence-nav">
+            <div class="gallery-sequence-dot active"></div>
+            <div class="gallery-sequence-dot"></div>
+            <div class="gallery-sequence-dot"></div>
+          </div>
+          
+          <ul class="gallery-list">
+            <li>
+              <article class="gallery-item">
+                <img src="assets/riding_bike.jpg" alt="Exploring Sitio Kapatagan, Brgy. Gupitan, Kapalong, Davao Del Norte by bike" />
+                <figcaption>Exploring Sitio Kapatagan, Brgy. Gupitan, Kapalong, Davao Del Norte by bike</figcaption>
+              </article>
+            </li>
+            <li>
+              <article class="gallery-item">
+                <img src="assets/landslide_country_side.jpg" alt="Witnessing a landslide on our countryside land" />
+                <figcaption>Witnessing a landslide on our countryside land</figcaption>
+              </article>
+            </li>
+            <li>
+              <article class="gallery-item">
+                <img src="assets/Escape-Nature-Camp.jpg" alt="Country Side Camping View" />
+                <figcaption>Country Side Camping View</figcaption>
+              </article>
+            </li>
+          </ul>
+          
+          <div class="social-share">
+            <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Share on Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Share on Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </section>
+
+        <section id="themes">
+          <h2>Core Themes</h2>
+          <p>These are the threads that weave through my adventures and photography:</p>
+          <ul>
+            <li><strong>Farming:</strong> Cultivating life and connecting with the earth.</li>
+            <li><strong>Camping:</strong> Embracing simplicity and nights under the stars.</li>
+            <li><strong>Photography:</strong> Capturing the fleeting beauty of the natural world.</li>
+            <li><strong>Nature Exploration:</strong> Discovering the wonders of the wild, big and small.</li>
+            <li><strong>Our Countryside Land:</strong> Documenting the seasons and stories from our special place.</li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>Connect With Me</h2>
+          <p>
+            Follow my adventures and connect with me on social media!
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1AMi1mSGZF/" target="_blank" class="social-link facebook">
+              <i class="fab fa-facebook"></i> Follow on Facebook
+            </a>
+          </div>
+        </section>
+
+        <section id="cta">
+          <h2>Join the Adventure!</h2>
+          <p>
+            Subscribe to my newsletter for exclusive content, travel tips, and more!
+          </p>
+          <a href="#" class="cta-button">Subscribe Now</a>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="currentYear"></span> Beth Cooper. All Rights Reserved.
+      </p>
+      <!-- Small nature-themed icon could go here -->
+    </footer>
+
+    <script>
+      // Simple script to update the year in the footer
+      document.getElementById('currentYear').textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>

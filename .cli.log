@@ -1,0 +1,27 @@
+2025-05-14 18:56:23 [INFO] Environment validation passed
+2025-05-14 18:56:40 [WARN] Failed to parse error message: Invalid selection
+2025-05-14 18:56:40 [ERROR] [31m[ERROR][0m 2025-05-14 18:56:40 - /c/Users/johnw/OneDrive/Desktop/www_personal_family_request/content_creator_one_page_website/beth-cooper/.cli.sh:724 - Invalid selection
+2025-05-14 18:56:40 [ERROR] [File: /c/Users/johnw/OneDrive/Desktop/www_personal_family_request/content_creator_one_page_website/beth-cooper/.cli.sh:724] Invalid selection
+  Command: main
+  Context:
+     721:                 log_info "Generating secret key..."
+     722:                 generate_secret_key
+     723:             } ;;
+     724:             *) log_error "Invalid selection" "main" ;;
+     725:         esac
+     726: 
+     727:         read -p "Press Enter to continue..."
+2025-05-14 18:56:47 [INFO] Starting Commit & Push All...
+2025-05-14 18:56:47 [INFO] Starting commit and push process...
+2025-05-14 18:56:47 [WARN] Failed to parse error message: Not inside a Git repository.
+2025-05-14 18:56:47 [ERROR] [31m[ERROR][0m 2025-05-14 18:56:47 - /c/Users/johnw/OneDrive/Desktop/www_personal_family_request/content_creator_one_page_website/beth-cooper/.cli.sh:479 - Not inside a Git repository.
+2025-05-14 18:56:47 [ERROR] [File: /c/Users/johnw/OneDrive/Desktop/www_personal_family_request/content_creator_one_page_website/beth-cooper/.cli.sh:479] Not inside a Git repository.
+  Command: commit_and_push
+  Context:
+     476: 
+     477:     # Check if inside a Git repository
+     478:     if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+     479:         log_error "Not inside a Git repository." "commit_and_push"
+     480:         echo -e "${ANSI_Red}[ERROR]${ANSI_Reset} This is not a Git repository. Aborting."
+     481:         return 1
+     482:     fi
