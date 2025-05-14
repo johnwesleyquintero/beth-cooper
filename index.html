@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Beth Cooper's personal website showcasing her adventures in exploration, storytelling, photography, and nature appreciation." />
     <title>Beth Cooper - Explorer & Storyteller</title>
     <!-- OpenGraph / Facebook -->
@@ -22,6 +23,9 @@
     <nav class="main-nav">
       <div class="container nav-container">
         <a href="#" class="logo">Beth Cooper</a>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#gallery" class="nav-link">Gallery</a></li>
@@ -69,6 +73,7 @@
       <a href="#about" class="cta-button">Discover My Story</a>
     </header>
 
+<main>
     <main>
       <div class="container">
         <section id="about">
@@ -80,32 +85,14 @@
             class="image-holder"
             src="assets/mom's_profile_photo.jpg"
             alt="Beth Cooper Profile Photo"
+            loading="lazy"
           />
         </section>
 
         <section id="gallery">
           <h2>My Gallery</h2>
           <p>A glimpse into my adventures.</p>
-          
-          <div class="gallery-sequence">
-            <div class="gallery-sequence-item">
-              <img src="assets/riding_bike.jpg" alt="Exploring Sitio Kapatagan by bike" />
-            </div>
-            <div class="gallery-sequence-item">
-              <img src="assets/landslide_country_side.jpg" alt="Countryside landslide" />
-            </div>
-            <div class="gallery-sequence-item">
-              <img src="assets/Escape-Nature-Camp.jpg" alt="Countryside camping" />
-            </div>
-          </div>
-          
-          <div class="gallery-sequence-nav">
-            <div class="gallery-sequence-dot active"></div>
-            <div class="gallery-sequence-dot"></div>
-            <div class="gallery-sequence-dot"></div>
-          </div>
-          
-          <ul class="gallery-list">
+          <ul class="gallery-list gallery-grid">
             <li>
               <article class="gallery-item">
                 <img src="assets/riding_bike.jpg" alt="Exploring Sitio Kapatagan, Brgy. Gupitan, Kapalong, Davao Del Norte by bike" />
@@ -125,7 +112,6 @@
               </article>
             </li>
           </ul>
-          
           <div class="social-share">
             <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
             <a href="#" aria-label="Share on Instagram"><i class="fab fa-instagram"></i></a>
@@ -163,9 +149,13 @@
           <p>
             Subscribe to my newsletter for exclusive content, travel tips, and more!
           </p>
-          <a href="#" class="cta-button">Subscribe Now</a>
+          <form action="#" method="POST" class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="cta-button">Subscribe</button>
+          </form>
         </section>
       </div>
+</main>
     </main>
 
     <footer>
