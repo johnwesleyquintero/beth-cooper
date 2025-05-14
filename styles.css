@@ -1,15 +1,13 @@
 /* c:\Users\johnw\portfolio\www_personal_family_request\content_creator_one_page_website\mother\style.css */
 
 /* Basic Reset and Body Styles */
-body {
-}
 
 main {
   padding: 20px; /* Add padding to the main content area */
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   color: #333;
   line-height: 1.7;
@@ -87,8 +85,13 @@ body {
 /* Headings */
 h1,
 h2 {
+  font-family: 'Playfair Display', serif;
   color: #795548; /* Brown color */
   margin-bottom: 15px;
+}
+
+:root {
+   --secondary-color: #8bc34a; /* Light Green */
 }
 
 h1 {
@@ -187,6 +190,7 @@ section,
 footer {
   padding: 60px 20px;
   text-align: center;
+  margin-bottom: 60px; /* Increased margin between sections */
 }
 
 /* Hero Section (Header) */
@@ -595,6 +599,7 @@ footer p {
   border-color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 /* Responsive Design */
@@ -624,6 +629,12 @@ footer p {
   .gallery-item img {
     height: 250px;
   }
+}
+
+@media (min-width: 1200px) {
+   .gallery-grid {
+       grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+   }
 }
 
 @media (max-width: 480px) {

@@ -14,6 +14,7 @@
     <meta property="og:image" content="https://bethcooper.netlify.app/assets/mom's_profile_photo.jpg" />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -74,7 +75,6 @@
     </header>
 
 <main>
-    <main>
       <div class="container">
         <section id="about">
           <h2>About Me</h2>
@@ -113,10 +113,10 @@
             </li>
           </ul>
           <div class="social-share">
-            <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="Share on Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Share on Pinterest"><i class="fab fa-pinterest"></i></a>
+            <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Share on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Share on Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
           </div>
         </section>
 
@@ -149,7 +149,7 @@
           <p>
             Subscribe to my newsletter for exclusive content, travel tips, and more!
           </p>
-          <form action="#" method="POST" class="newsletter-form">
+          <form action="[YOUR_NEWSLETTER_SERVICE_ENDPOINT]" method="POST" class="newsletter-form">
             <input type="email" placeholder="Enter your email" required>
             <button type="submit" class="cta-button">Subscribe</button>
           </form>
@@ -160,9 +160,10 @@
 
     <footer>
       <p>
-        &copy; <span id="currentYear"></span> Beth Cooper. All Rights Reserved.
+        &copy; <span id="currentYear"></span> Beth Cooper. All Rights Reserved.  Designed and built by <a href="https://wescode.vercel.app/" target="_blank" rel="noopener noreferrer">Wesley Quintero</a>.
       </p>
       <!-- Small nature-themed icon could go here -->
+      <i class="fas fa-leaf"></i>
     </footer>
 
     <script>
