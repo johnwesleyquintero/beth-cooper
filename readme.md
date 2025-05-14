@@ -4,6 +4,10 @@ A landing page showcasing Beth Cooper's life, passions, and creative work.
 
 ---
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ccdc3e42-3cd0-4e3d-9eb4-8df613ffd398/deploy-status)](https://app.netlify.com/projects/bethcooper/deploys)
+
+---
+
 ## Table of Contents
 
 1.  [Project Description](#project-description)
