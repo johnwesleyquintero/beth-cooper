@@ -31,3 +31,15 @@
 2025-05-14 19:23:26 [INFO] Successfully committed changes with message: 'feat(codebase): Implement new feature: made improvements'
 2025-05-14 19:23:29 [INFO] Successfully pushed changes.
 2025-05-14 19:23:29 [INFO] Commit and push process completed successfully.
+2025-05-14 20:02:35 [WARN] Failed to parse error message: Invalid selection
+2025-05-14 20:02:35 [ERROR] [31m[ERROR][0m 2025-05-14 20:02:35 - /c/Users/johnw/OneDrive/Desktop/www_personal_family_request/content_creator_one_page_website/beth-cooper/.cli.sh:724 - Invalid selection
+2025-05-14 20:02:35 [ERROR] [File: /c/Users/johnw/OneDrive/Desktop/www_personal_family_request/content_creator_one_page_website/beth-cooper/.cli.sh:724] Invalid selection
+  Command: main
+  Context:
+     721:                 log_info "Generating secret key..."
+     722:                 generate_secret_key
+     723:             } ;;
+     724:             *) log_error "Invalid selection" "main" ;;
+     725:         esac
+     726: 
+     727:         read -p "Press Enter to continue..."

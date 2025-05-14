@@ -1,0 +1,15 @@
+{
+  "name": "beth-cooper",
+  "version": "1.0.0",
+  "description": "Beth Cooper's landing page",
+  "scripts": {
+    "build": "copy index.html dist\\index.html && copy styles.css dist\\styles.css && copy script.js dist\\script.js && copy netlify.toml dist\\netlify.toml && xcopy assets dist\\assets /E /Y /I",
+    "start": "serve dist",
+    "dev": "serve ."
+  },
+  "author": "John Wesley Quintero",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
