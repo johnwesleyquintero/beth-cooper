@@ -13,9 +13,10 @@ A landing page showcasing Beth Cooper's life, passions, and creative work.
 5.  [Anything Else Important?](#anything-else-important)
 6.  [Project Structure](#project-structure)
 7.  [Run the server](#run-the-server)
-8.  [Clone the repository](#clone-the-repository)
-9.  [Contributing](#contributing)
-10. [License](#license)
+8.  [Build the project](#build-the-project)
+9.  [Clone the repository](#clone-the-repository)
+10. [Contributing](#contributing)
+11. [License](#license)
 
 ---
 
@@ -30,6 +31,7 @@ This landing page showcases Beth Cooper's life, passions, and creative work. It 
 To get started with this project:
 
 -   Clone the repository (see [Clone the repository](#clone-the-repository)).
+-   Build the project (see [Build the project](#build-the-project)).
 -   Run the server (see [Run the server](#run-the-server)).
 
 ---
@@ -62,16 +64,20 @@ To get started with this project:
 
 The project structure:
 
--   `index.html`: The main HTML file.
--   `styles.css`: The CSS file.
--   `script.js`: The JavaScript file.
+-   `src/`: Directory containing the source files.
+    -   `index.html`: The main HTML file.
+    -   `styles.css`: The CSS file.
+    -   `script.js`: The JavaScript file.
+    -   `netlify.toml`: Netlify configuration file.
 -   `assets/`: Directory containing assets.
     -   `Escape-Nature-Camp.jpg`: Image.
     -   `landslide_country_side.jpg`: Image.
     -   `mom's_profile_photo.jpg`: Profile photo.
-    -   `photo_caption.txt`: Text file.
     -   `riding_bike.jpg`: Image.
+    -   `favicon.svg`: Favicon.
+-   `build.js`: Build script.
 -   `readme.md`: This file.
+-   `package.json`: Project configuration file.
 
 ---
 
@@ -83,10 +89,21 @@ To run the landing page locally:
 2.  Run:
 
     ```bash
-    python -m http.server
+    npm run start
     ```
 
-3.  Open your web browser and go to `http://localhost:8000`.
+---
+
+## Build the project
+
+To build the project:
+
+1.  Open a terminal in the project directory.
+2.  Run:
+
+    ```bash
+    npm run build
+    ```
 
 ---
 
